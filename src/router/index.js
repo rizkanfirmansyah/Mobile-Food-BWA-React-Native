@@ -30,6 +30,11 @@ const Router = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
+        name="MainApp"
+        component={MainApp}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
         name="SplashScreen"
         component={SplashScreen}
         options={{headerShown: false}}
@@ -52,11 +57,6 @@ const Router = () => {
       <Stack.Screen
         name="SuccessSignUp"
         component={SuccessSignUp}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="MainApp"
-        component={MainApp}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

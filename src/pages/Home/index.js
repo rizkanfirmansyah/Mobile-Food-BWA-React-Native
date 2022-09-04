@@ -1,28 +1,27 @@
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {FoodDummy1, FoodDummy2, ProfileDummy} from '../../assets';
-import {FoodCard, Gap} from '../../components';
+import {ScrollView, StyleSheet, View} from 'react-native';
+import {FoodDummy1, FoodDummy2} from '../../assets';
+import {FoodCard, Gap, HomeProfile, HomeTabSection} from '../../components';
 
 const Home = () => {
   return (
-    <View>
-      <View style={styles.profileContainer}>
-        <View>
-          <Text style={styles.appName}>FoodMarket</Text>
-          <Text style={styles.appDesc}>Let's get some foods</Text>
-        </View>
-        <Image source={ProfileDummy} style={styles.profile} />
+    <View style={styles.page}>
+      <HomeProfile />
+      <View>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <View style={styles.foodCardContainer}>
+            <Gap width={24} />
+            <FoodCard image={FoodDummy1} />
+            <FoodCard image={FoodDummy2} />
+            <FoodCard image={FoodDummy1} />
+            <FoodCard image={FoodDummy2} />
+            <Gap width={24} />
+          </View>
+        </ScrollView>
       </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <View style={styles.foodCardContainer}>
-          <Gap width={24} />
-          <FoodCard image={FoodDummy1} />
-          <FoodCard image={FoodDummy2} />
-          <FoodCard image={FoodDummy1} />
-          <FoodCard image={FoodDummy2} />
-          <Gap width={24} />
-        </View>
-      </ScrollView>
+      <View style={styles.tabContainer}>
+        <HomeTabSection />
+      </View>
     </View>
   );
 };
@@ -30,31 +29,14 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  profileContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 24,
-    paddingTop: 32,
-    paddingBottom: 24,
-    backgroundColor: 'white',
-  },
-  appName: {
-    fontSize: 22,
-    fontFamily: 'Poppins-Medium',
-    color: '#020202',
-  },
-  appDesc: {
-    fontSize: 14,
-    fontFamily: 'Poppins-Light',
-    color: '#8D92A3',
-  },
-  profile: {
-    width: 50,
-    height: 50,
-    borderRadius: 8,
+  page: {
+    flex: 1,
   },
   foodCardContainer: {
     flexDirection: 'row',
     marginVertical: 24,
+  },
+  tabContainer: {
+    flex: 1,
   },
 });
