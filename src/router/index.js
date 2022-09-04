@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
+  FoodDetail,
   Home,
   Order,
   Profile,
@@ -57,6 +58,11 @@ const Router = () => {
       <Stack.Screen
         name="SuccessSignUp"
         component={SuccessSignUp}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="FoodDetail"
+        component={FoodDetail}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

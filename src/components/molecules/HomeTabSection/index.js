@@ -1,10 +1,10 @@
-import {StyleSheet, Text, View, Dimensions, Image} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
-import {FoodDummy1, FoodDummy2} from '../../../assets';
-import Rating from '../Rating';
-import ItemListFood from '../ItemListFood';
+import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
+import {SceneMap, TabBar, TabView} from 'react-native-tab-view';
+import {FoodDummy1, FoodDummy2} from '../../../assets';
+import ItemListFood from '../ItemListFood';
 
 const renderTabBar = props => (
   <TabBar
@@ -14,7 +14,13 @@ const renderTabBar = props => (
       height: 3,
       marginHorizontal: 'auto',
     }}
-    style={{backgroundColor: 'white'}}
+    style={{
+      backgroundColor: 'white',
+      elevation: 0,
+      shadowOpacity: 0,
+      borderBottomColor: '#F2F2F2',
+      borderBottomWidth: 1,
+    }}
     renderLabel={({route, focused, color}) => (
       <Text
         style={{
@@ -28,40 +34,80 @@ const renderTabBar = props => (
 );
 
 const NewTaste = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView>
       <View style={{paddingTop: 8}}>
-        <ItemListFood image={FoodDummy1} />
-        <ItemListFood image={FoodDummy2} />
-        <ItemListFood image={FoodDummy1} />
-        <ItemListFood image={FoodDummy2} />
-        <ItemListFood image={FoodDummy1} />
+        <ItemListFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy2}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy2}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
       </View>
     </ScrollView>
   );
 };
 const Popular = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView>
       <View style={{paddingTop: 8}}>
-        <ItemListFood image={FoodDummy1} />
-        <ItemListFood image={FoodDummy2} />
-        <ItemListFood image={FoodDummy1} />
-        <ItemListFood image={FoodDummy2} />
-        <ItemListFood image={FoodDummy1} />
+        <ItemListFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy2}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy2}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
       </View>
     </ScrollView>
   );
 };
 const Recomended = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView>
       <View style={{paddingTop: 8}}>
-        <ItemListFood image={FoodDummy1} />
-        <ItemListFood image={FoodDummy2} />
-        <ItemListFood image={FoodDummy1} />
-        <ItemListFood image={FoodDummy2} />
-        <ItemListFood image={FoodDummy1} />
+        <ItemListFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy2}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ItemListFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
       </View>
     </ScrollView>
   );
@@ -87,6 +133,7 @@ const HomeTabSection = () => {
       renderScene={renderScene}
       onIndexChange={setIndex}
       initialLayout={{width: Dimensions.get('window').width}}
+      style={{backgroundColor: 'white'}}
     />
   );
 };
