@@ -37,26 +37,31 @@ const NewTaste = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <View style={{paddingTop: 8}}>
+      <View style={{paddingTop: 8, paddingHorizontal: 24}}>
         <ItemListFood
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
       </View>
     </ScrollView>
@@ -66,26 +71,31 @@ const Popular = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <View style={{paddingTop: 8}}>
+      <View style={{paddingTop: 8, paddingHorizontal: 24}}>
         <ItemListFood
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
       </View>
     </ScrollView>
@@ -95,18 +105,21 @@ const Recomended = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <View style={{paddingTop: 8}}>
+      <View style={{paddingTop: 8, paddingHorizontal: 24}}>
         <ItemListFood
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
         <ItemListFood
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
+          rating={4}
         />
       </View>
     </ScrollView>
